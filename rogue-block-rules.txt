@@ -1,7 +1,7 @@
 ! Title: 国内流氓全家桶整站屏蔽规则
 ! Description: 整域封锁 360系/2345系/金山猎豹系/百度广告统计/广告联盟/流氓下载站/系统镜像站/流氓工具/导航站/垃圾文库——让站点直接打不开（DNS层），非去广告
 ! Homepage: 自用
-! Version: 2026.06.07.3
+! Version: 2026.06.07.4
 ! Last modified: 2026-06-07T00:00:00+08:00
 ! Expires: 3 days (AdGuard Home 会按此周期自动重新拉取更新)
 ! Syntax: AdGuard / Adblock（|| 开头、^ 结尾 = 屏蔽该域名及其全部子域名）
@@ -77,9 +77,10 @@
 ! ======================================================================
 ! 四、百度广告 / 统计联盟（精准子域，不动搜索/地图/网盘等正常服务）
 ! ======================================================================
-! —— 百度网盟广告 ——
+! —— 百度网盟广告 / 联盟 ——
 ||pos.baidu.com^
 ||cpro.baidu.com^
+||cpro.baidustatic.com^
 ||cbjs.baidu.com^
 ||cbjg.baidu.com^
 ||spcode.baidu.com^
@@ -88,11 +89,24 @@
 ||afd.baidu.com^
 ||ubmcmm.baidu.com^
 ||dup.baidustatic.com^
+||union.baidu.com^
+||union.baidu.cn^
+||nadvideo2.baidu.com^
+||feed-image.baidu.com^
+||dxp.baidu.com^
+||entry.baidu.com^
+||fclog.baidu.com^
+||fxgate.baidu.com^
+||bgg.baidu.com^
+||luimg.baidu.com^
 ! —— 百度移动广告 ——
 ||mobads.baidu.com^
 ||mobads-logs.baidu.com^
 ! —— 百度统计 / 点击追踪 ——
 ||hm.baidu.com^
+||hmma.baidu.com^
+||mtj.baidu.com^
+||bes-mtj.baidu.com^
 ||nsclick.baidu.com^
 ||duclick.baidu.com^
 ||als.baidu.com^
@@ -105,6 +119,7 @@
 ||cnzz.com^
 ||umeng.com^
 ||umeng.co^
+||umengcloud.com^
 ||umtrack.com^
 ||mmstat.com^
 ||51.la^
@@ -138,7 +153,6 @@
 ! 华军软件园
 ||onlinedown.net^
 ||newhua.com^
-||2ueyes.cn^
 ! 天空下载
 ||skycn.com^
 ! 非凡软件站
@@ -177,8 +191,6 @@
 ||itmop.com^
 ! 当下软件园
 ||downsc.com^
-! ZOL软件下载
-||zol.com.cn^
 !
 ! ======================================================================
 ! 七、系统 / Ghost 镜像站（盗版系统 + 暗装捆绑）
@@ -287,6 +299,8 @@
 ! —— 腾讯广告联盟 / 广点通 GDT（朋友圈/公众号/小程序广告来源）——
 ||gdt.qq.com^
 ||pgdt.gtimg.cn^
+||gdtimg.com^
+||ugdtimg.com^
 !
 ! —— 腾讯统计 / 埋点上报（仅遥测，封了不影响功能）——
 ||mta.qq.com^
