@@ -141,7 +141,6 @@
 ||domob.cn^
 ||adview.cn^
 ||inmobi.cn^
-||apt-agent.org^
 ! —— 国外广告 / 分析（按需保留，可能影响海外站）——
 ||doubleclick.net^
 ||googlesyndication.com^
