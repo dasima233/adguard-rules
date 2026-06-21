@@ -1,0 +1,104 @@
+! ============================================================
+! PCDN 抑制清单 —— AGH 适配精简版
+! Version: 2026.06.07
+! 基于网络流传「综合优化版 v2」改造，上游来源 anti-AD/discretion/pcdn.txt
+! 改造要点：
+!   - 删除整个白名单段（含危险的 @@||qq.com^$important，会解禁你的腾讯拦截）
+!   - 删除 AGH 不支持的浏览器/路径/修饰符规则（去广告交给秋风订阅）
+!   - ||*stun*^ 移入慎用段并默认关闭（会影响 WebRTC 通话）
+!   - 去重：hcdn./pcdn./mcdn. 开头的显式域名已被关键词规则覆盖，不再单列
+! 用法：作为 AGH 一条独立黑名单（订阅或粘贴），勿与去广告/流氓站清单合并
+! ============================================================
+
+! ---------- 1. PCDN 厂商关键词（广谱拦截）----------
+||*pcdn*^
+||*mcdn*^
+||*hcdn*^
+||*p2cdn*^
+||*peercdn*^
+||*cdnbye*^
+||*cdnnodedns*^
+||*ppio*^
+||*onething*^
+||*pkoplink*^
+||*p2ptun*^
+||*xycdn*^
+||*xycloud*^
+||*xyp2p*^
+||*kuiniuca*^
+||*yfcloud*^
+||*yfp2p*^
+||*yfcdn*^
+||*szbdyd*^
+||*uhabo*^
+||*v-p2p*^
+||*m-p2p*^
+||*nexusedgeio*^
+||*tianwenca*^
+||*mountaintoys*^
+||*bsccdn*^
+||*volcvideo*^
+||*lf3-p2p*^
+||*p2p-snssdk*^
+
+! ---------- 2. P2P 日志 / 升级 / 调度关键词 ----------
+||*p2pupdate*^
+||*p2pupgrade*^
+||*p2perrorlog*^
+||*p2plog*^
+||*p2p-log*^
+||*p2pchunk*^
+||*p2plive*^
+||*p2p*gslb*^
+
+! ---------- 3. 视频平台 P2P 调度域（关键词盖不到的，精准列出）----------
+! 腾讯视频
+||vodlive.qq.com^
+||iwan-s.video.qq.com^
+||tpstelemetry.tencent.com^
+||p2p.qq.com^
+! 爱奇艺
+||pdata.video.qiyi.com^
+||cachecdn.v.iqiyi.com^
+||meta-cdn.video.iq.com^
+||data6.video.iqiyi.com^
+! 优酷/土豆
+||atm.youku.com^
+||fvid.atm.youku.com^
+||html.atm.youku.com^
+||valb.atm.youku.com^
+||valf.atm.youku.com^
+||static.atm.youku.com^
+||valc.atm.youku.com^
+! 哔哩哔哩
+||bvc.bilivideo.com^
+! 字节/西瓜/抖音
+||pull-rtmp-l11.ixigua.com^
+||push-rtmp-l1.ixigua.com^
+||pull-hs-f5-hot.flive.douyincdn.com^
+||flive.douyincdn.com^
+||p2p-v.byteoversea.com^
+! 斗鱼/虎牙/芒果
+||p2p.douyucdn.cn^
+||p2p.huya.com^
+||stun.hitv.com^
+
+! ---------- 4. 音乐 / 下载 P2P ----------
+||trackercdn.kugou.com^
+||mobiletrackercdn.kugou.com^
+||d.kugou.com^
+||sf.163.com^
+||isure6.stream.qqmusic.qq.com^
+||p-cdn.com^
+! 注：下面两条 scdn.co 是 Spotify CDN，若你用 Spotify 会受影响，默认关闭
+! ||pscdn.co^
+! ||p.scdn.co^
+
+! ---------- 5. 慎用段（默认关闭，确认不影响通话再开启）----------
+! STUN 全局拦截：会阻断 WebRTC 的 NAT 穿透，影响语音/视频通话、
+! 会议软件、部分 VoIP。你若发现 QQ/微信/会议软件通话接不通，保持注释。
+! ||*stun*^
+
+! ============================================================
+! 清单结束
+! ============================================================
