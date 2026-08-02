@@ -330,5 +330,90 @@
 ! ||app.zol.com.cn^
 !
 ! ======================================================================
+! 十五、UC / 夸克系（阿里移动浏览器生态）
+! 说明：
+! 仅屏蔽广告、推广、统计、推送、联盟服务
+! 不建议整封 uc.cn / quark.cn，避免影响正常浏览器、网盘功能
+! ======================================================================
+
+! ----------------------
+! UC 浏览器核心推广域
+! ----------------------
+
+||ucweb.com^
+||uc.cn^
+
+! UC CDN / 静态资源推广
+||ucstatic.com^
+||ucweb.com.cn^
+||ucweb.net^
+||ucweb.net.cn^
+
+! UC 广告 / 推荐 / 信息流
+||ad.uc.cn^
+||ads.uc.cn^
+||ucads.com^
+||uczzd.cn^
+||uczzd.com^
+||uczzd.com.cn^
+
+! UC 数据统计 / 埋点
+||log.uc.cn^
+||logs.uc.cn^
+||stat.uc.cn^
+||track.uc.cn^
+||metrics.uc.cn^
+
+! UC 推送服务
+||push.uc.cn^
+||push.ucweb.com^
+
+! UC 搜索推广
+||sm.cn^
+||sm.cn^
+
+! ----------------------
+! 夸克浏览器
+! ----------------------
+
+! 夸克主生态（如不用夸克可开启整封）
+! ||quark.cn^
+
+! 夸克广告
+||ad.quark.cn^
+||ads.quark.cn^
+
+! 夸克推荐流 / 信息流
+||feed.quark.cn^
+||api.quark.cn^
+
+! 夸克统计
+||log.quark.cn^
+||logs.quark.cn^
+||stat.quark.cn^
+||track.quark.cn^
+
+! 夸克推送
+||push.quark.cn^
+
+! 夸克推广联盟
+||open.quark.cn^
+||promotion.quark.cn^
+
+! ----------------------
+! 阿里移动广告相关（UC/夸克共用）
+! ----------------------
+
+||tanx.com^
+||alimama.com^
+
+! 阿里广告联盟
+||afp.alicdn.com^
+||atanx.alicdn.com^
+
+! 阿里统计
+||umeng.com^
+||umengcloud.com^
+||ut.aliyun.com^
 ! 规则结束
 ! ======================================================================
