@@ -1,3 +1,4 @@
 challenges.cloudflare.com
 +.wd-gold.com
++.wd-gold.net
 +.api-flowercloud.com
