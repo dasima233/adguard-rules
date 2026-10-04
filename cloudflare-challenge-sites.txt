@@ -1,2 +1,3 @@
-wd-gold.net
-api-flowercloud.com
+challenges.cloudflare.com
+.wd-gold.net
+.api-flowercloud.com
